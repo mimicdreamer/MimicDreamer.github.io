@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="DriveDreamer: Towards Real-world-driven World Models for Autonomous Driving">
+        content="MimicDreamer: Aligning Human and Robot Demonstrations for Scalable VLA Training">
   <meta name="keywords" content="DriveDreamer">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DriveDreamer: Towards Real-world-driven World Models for Autonomous Driving</title>
+  <title>MimicDreamer: Aligning Human and Robot Demonstrations for Scalable VLA Training</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -69,18 +69,38 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">DriveDreamer: Towards Real-world-driven <br> World Models for Autonomous Driving </h1>
+          <h1 class="title is-1 publication-title">MimicDreamer: Aligning Human and Robot Demonstrations for Scalable VLA Training </h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=96lsfiUAAAAJ&hl">Xiaofeng Wang</a><sup>1*</sup>,</span>
+              <a >Haoyun Li</a><sup>1,2*</sup>,</span>
             <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=NmwjI0AAAAAJ&hl">Zheng Zhu</a><sup>1*</sup>,</span>
+              <a >Ivan Zhang</a><sup>1,3*</sup>,</span>
             <span class="author-block">
-              <a >Guan Huang</a><sup>1,2</sup>,</span>
+              <a >Runqi Ouyang</a><sup>1,2*</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=96lsfiUAAAAJ&hl">Xiaofeng Wang</a><sup>1,4*</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=NmwjI0AAAAAJ&hl">Zheng Zhu</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a >Zhiqin Yang</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a >Zhentao Zhang</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a >Boyuan Wang</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a >Chaojun Ni</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a >Wenkang Qin</a><sup>1</sup>,</span>
             <span class="author-block">
               <a >Xinze Chen</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a >Jiagang Zhu</a><sup>1</sup>,</span>
+              <a >Yun Ye</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a >Guan Huang</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a >Zhenbo Song</a><sup>3</sup>,</span>
+            <span class="author-block">
+              <a >Xingang Wang</a><sup>2</sup>,</span>
             <span class="author-block">
               <a href="https://scholar.google.com/citations?user=TN8uDQoAAAAJ&hl">Jiwen Lu</a><sup>2</sup>,</span>
             </span><br>
@@ -89,7 +109,9 @@
 
           <div class="is-size-5 publication-authors">
             <span class="author-block">GigaAI<sup>1</sup>,</span>&nbsp;
-            <span class="author-block">Tsinghua University<sup>2</sup></span>&nbsp;
+            <span class="author-block">CASIA<sup>2</sup>,</span>&nbsp;
+            <span class="author-block">NJUST<sup>3</sup>,</span>&nbsp;
+            <span class="author-block">Tsinghua University<sup>4</sup></span>&nbsp;
           </div>
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>*</sup>Equal Contribution</span>
@@ -99,7 +121,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2309.09777.pdf"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -109,7 +131,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/JeffWang987/DriveDreamer"
+                <a href="https://github.com/GigaAI-research/MimicDreamer"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -124,19 +146,17 @@
     </div>
   </div>
 </section>
-
+<!-- 
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
         <img id="teaser" autoplay muted loop playsinline height="100%" src="./static/images/abs.png" style="width:100%;height:100%;">
-      <p  style="font-size: 16px;"> 
-        DriveDreamer excels in controllable driving video generation, aligning seamlessly with text prompts and structured traffic constraints. DriveDreamer can also interact with the driving scene and predict different future driving videos, based on input driving actions. Furthermore, DriveDreamer extends its utility to anticipate future driving actions.
+       <p  style="font-size: 16px;"> 
+         DriveDreamer excels in controllable driving video generation, aligning seamlessly with text prompts and structured traffic constraints. DriveDreamer can also interact with the driving scene and predict different future driving videos, based on input driving actions. Furthermore, DriveDreamer extends its utility to anticipate future driving actions.
       </p>
     </div>
   </div>
-</section>
-
-
+</section> -->
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
@@ -145,21 +165,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            World models, especially in autonomous driving, are trending and drawing extensive attention due to its 
-            capacity for comprehending driving environments. The established world model holds immense potential 
-            for the generation of high-quality driving videos, and driving policies for safe maneuvering. However, 
-            a critical limitation in relevant research lies in its predominant focus on gaming environments or simulated 
-            settings, thereby lacking the representation of real-world driving scenarios. Therefore, we introduce 
-            DriveDreamer, a pioneering world model entirely derived from real-world driving scenarios. Regarding that 
-            modeling the world in intricate driving scenes entails an overwhelming search space, we propose harnessing 
-            the powerful diffusion model to construct a comprehensive representation of the complex environment. Furthermore, 
-            we introduce a two-stage training pipeline. In the initial phase, DriveDreamer acquires a deep understanding of 
-            structured traffic constraints, while the subsequent stage equips it with the ability to anticipate future states. 
-            The proposed DriveDreamer is the first world model established from real-world driving scenarios. We instantiate 
-            DriveDreamer on the challenging nuScenes benchmark, and extensive experiments verify that DriveDreamer empowers precise,
-            controllable video generation that faithfully captures the structural constraints of real-world traffic scenarios.  
-            Additionally, DriveDreamer enables the generation of realistic and reasonable driving policies, opening avenues for 
-            interaction and practical applications.
+            Vision Language Action (VLA) models derive their generalization capability from diverse training data, yet collecting embodied robot interaction data remains prohibitively expensive. In contrast, human demonstration videos are far more scalable and cost-efficient to collect, and recent studies confirm their effectiveness in training VLA models. However, a significant domain gap persists between human videos and robot-executed videos, including unstable camera viewpoints, visual discrepancies between human hands and robotic arms, and differences in motion dynamics. To bridge this gap, we propose MimicDreamer, a framework that turns fast, low-cost human demonstrations into robot-usable supervision by jointly aligning vision, viewpoint, and actions to directly support policy training. For visual alignment, we propose H2R Aligner, a video diffusion model that generates high-fidelity robot demonstration videos by transferring motion from human manipulation footage. For viewpoint stabilization, EgoStabilizer is proposed, which canonicalizes egocentric videos via homography and inpaints occlusions and distortions caused by warping. For action alignment, we map human hand trajectories to the robot frame and apply a constrained inverse kinematics solver to produce feasible, low-jitter joint commands with accurate pose tracking. Empirically, VLA models trained purely on our synthesized human-to-robot videos achieve few-shot execution on real robots. Moreover, scaling training with human data significantly boosts performance compared to models trained solely on real robot data; our approach improves the average success rate by 14.7% across six representative manipulation tasks.
           </p>
         </div> 
       </div>
@@ -177,14 +183,15 @@
     <section class="hero method">
       <div class="container is-max-desktop">
         <div class="hero-body">
-          <img id="method" autoplay muted loop playsinline height="100%" src="./static/images/method.png" style="width:100%;height:100%;">
+          <img id="method" autoplay muted loop playsinline height="100%" src="./static/images/toc.png" style="width:100%;height:100%;">
           <p>
-            The DriveDreamer framework begins with an initial reference frame and its corresponding road structural information (i.e., HDMap and 3D box). Within this context, DriveDreamer leverages the proposed ActionFormer to predict forthcoming road structural features in the latent space. These predicted features serve as conditions and are provided to Auto-DM, which generates future driving videos. Simultaneously, the utilization of text prompts allows for dynamic adjustments to the driving scenario style (e.g., weather and time of the day). Moreover, DriveDreamer incorporates historical action information and the multi-scale latent features extracted from Auto-DM, which are combined to generate reasonable future driving actions.  In essence, DriveDreamer offers a comprehensive framework that seamlessly integrates multi-modal inputs to generate future driving videos and driving policies, thereby advancing the capabilities of autonomous-driving systems.
-			<!--/
-            Method overview: Starting from a randomly sampled latent code <span class="math inline">\(x_{T}^{1}\)</span>, we apply <span class="math inline">\(\Delta t\)</span> DDIM backward steps to obtain <span class="math inline">\(x_{T'}^{1}\)</span> using a pre-trained Stable Diffusion model (SD). A specified motion field results for each frame <span class="math inline">\(k\)</span> in a warping function <span class="math inline">\(W_k\)</span> that turns <span class="math inline">\(x_{T'}^{1}\)</span> to <span class="math inline">\(x_{T'}^{k}\)</span>. By enhancing the latent codes with motion dynamics, we determine the global scene and camera motion and achieve temporal consistency in the background and the global scene.
-            A subsequent DDPM forward application delivers latent codes <span class="math inline">\(x_{T}^{k}\)</span> for <span class="math inline">\(k=1,\ldots,m\)</span>. By using the (probabilistic) DDPM method, a greater degree of freedom is achieved with respect to the motion of objects.
-            Finally, the latent codes are passed to our modified SD model using the proposed cross-frame attention, which uses keys and values from the first frame to generate the image of frame <span class="math inline">\(k=1,\ldots,m\)</span>. By using cross-frame attention,  the appearance and the identity of the foreground object are preserved  throughout the sequence. 
-            Optionally, we apply background smoothing. To this end, we employ salient object detection to obtain for each frame <span class="math inline">\(k\) a mask <span class="math inline">\(M^{k}\)</span> indicating the foreground pixels. Finally, for the background (using the mask <span class="math inline">\(M^{k}\)</span>), a convex combination between the latent code <span class="math inline">\(x_{t}^{1}\)</span> of frame one warped to frame <span class="math inline">\(k\)</span> and the latent code <span class="math inline">\(x_{t}^{k}\)</span> is used to further improve the temporal consistency of the background.-->
+            Overview of <i>MimicDreamer</i>. Viewpoint branch (top left): egocentric videos are stabilized by <span style="font-variant: small-caps;">EgoStabilizer</span> (warp perspective + background inpainting) to produce stable egocentric videos. Camera intrinsics/extrinsics and the robot URDF drive sim rendering to generate additional stable ego views. Action branch (bottom left): 3D hand trajectories are converted to robot actions with IK solver. Visual alignment (right): <span style="font-variant: small-caps;">H2R Aligner</span> learns to bridge the human-to-robot visual gap using stable egocentric videos and simulation robot videos. The resulting synthesized robot videos and robot actions are used for VLA training.
+          </p>
+        </div>
+        <div class="hero-body">
+          <img id="method" autoplay muted loop playsinline height="100%" src="./static/images/h2r.png" style="width:100%;height:100%;">
+          <p>
+            <span style="font-variant: small-caps;">H2R Aligner</span>. During training, the real robot video V<sub>gt</sub>, background V<sub>scene</sub>, and simulated foreground V<sub>sim</sub> are encoded by a frozen VAE and channel-concatenated as [z̃<sub>tar</sub>, z<sub>scene</sub>, z<sub>sim</sub>] before entering the trainable H2R DiT, optimized with <code>CogVideoXLoss</code> loss. During inference, a hand-masked human background and IK-replayed simulation serve as conditions; the target starts from noise, is denoised by H2R DiT, and decoded by the frozen VAE into synthesized robot videos. 
           </p>
         </div>
       </div>
@@ -195,72 +202,169 @@
 
 <section class="section" id="Results">
   <div class="container is-max-desktop content">
-    <h2 class="title">Results</h2>
-    <section class="hero method">
+    <h2 class="title">Results of VLA policy on Mimic Robot Data</h2>
+    <!-- <section class="hero method">
     <div class="container is-max-desktop">
-    <div class="hero-body">  
+    <div class="hero-body">   -->
 
-  <h4 class="title">1. Diverse Driving Video Generation.</h4>
+  <h4 class="title">1. Few-Shot Experimental Results</h4>
     <div class="container is-max-desktop">
-        <video preload="auto"poster="" id="tree" autoplay controls muted loop width="12000px" outline="0px"> 
-          <source src="./static/videos/diverse.mp4"
-          type="video/mp4">
-        </video>
+      <img id="method" autoplay muted loop playsinline height="100%" src="./static/images/exp1.png" style="width:100%;height:100%;">
     </div> 
+    <p>
+      Quantitative Results Across Three Training Setups. SR and PSR for a Robot Only baseline (20 robot data), w. Minimal Robot trained primarily on synthesized data (20 human-to-robot data + 3 robot data), and w. Equal Data using a balanced mix (20 human-to-robot data + 20 robot data).
+    </p>
     <br>
     <p style="margin-bottom: 30px;"></p>
 
-	<h4 class="title">2. Driving Video Generation with Traffic Condition and Different Text Prompts (Sunny, Rainy, Night)</h4>
+	<h4 class="title">2. Scaling Experiment results</h4>
   <div class="container is-max-desktop">
-    <div style="text-align: center;">
-      <video preload="auto" poster="" id="tree" autoplay controls muted loop width="1200px" outline="0px" style="display: inline-block;">
-        <source src="./static/videos/text_driven.mp4" type="video/mp4">
-      </video>
+    <div style="display: inline-block; width: 33%; vertical-align: top;">
+      <img src="./static/images/Pick Bag.png" style="width:100%;">
+      <p style="text-align: center;">(a) <code>Pick Bag</code></p>
     </div>
-  </div>
-  <br>
-	<p style="margin-bottom: 30px;"></p>
-
-  <h4 class="title">3. Future Driving Video Generation with Action Interaction.</h4>
-
-  <div class="container is-max-desktop">
-    <div style="text-align: center;">
-      <video preload="auto" poster="" id="tree" autoplay controls muted loop width="1000px" outline="0px" style="display: inline-block;">
-        <source src="./static/videos/action_interact_concat.mp4" type="video/mp4">
-      </video>
+    <div style="display: inline-block; width: 33%; vertical-align: top;">
+      <img src="./static/images/Clean Surface.png" style="width:100%;">
+      <p style="text-align: center;">(b) <code>Clean Surface</code></p>
     </div>
-  </div>
-  <br>
-	<p style="margin-bottom: 30px;"></p>
-
-	<h4 class="title">4. Future Driving Action Generation.</h4>
-
-  <div class="container is-max-desktop">
-    <div style="text-align: center;">
-      <video preload="auto" poster="" id="tree" autoplay controls muted loop width="1000px" outline="0px" style="display: inline-block;">
-        <source src="./static/videos/action_pred_concat.mp4" type="video/mp4">
-      </video>
+    <div style="display: inline-block; width: 33%; vertical-align: top;">
+      <img src="./static/images/Stack Bowls.png" style="width:100%;">
+      <p style="text-align: center;">(c) <code>Stack Bowls</code></p>
     </div>
-  </div>
-
-  </div></div></section>
-  </div>
+    
+    <div style="display: inline-block; width: 33%; vertical-align: top;">
+      <img src="./static/images/Dry Hands.png" style="width:100%;">
+      <p style="text-align: center;">(d) <code>Dry Hands</code></p>
+    </div>
+    <div style="display: inline-block; width: 33%; vertical-align: top;">
+      <img src="./static/images/Insert Tennis.png" style="width:100%;">
+      <p style="text-align: center;">(e) <code>Insert Tennis</code></p>
+    </div>
+    <div style="display: inline-block; width: 33%; vertical-align: top;">
+      <img src="./static/images/Stack Cups.png" style="width:100%;">
+      <p style="text-align: center;">(f) <code>Stack Cups</code></p>
+    </div>
+  </div> 
+  <p>
+    Scaling Experiment Results. As more human-to-robot data is added, the <i>MimicDreamer</i>'s success rate monotonically increases across all six tasks.
+  </p>
 </section>
 
-	
-	
+<section class="section" id="Results">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Results of <span style="font-variant: small-caps;">H2R Aligner</span></h2>
+    <!-- <section class="hero method">
+    <div class="container is-max-desktop">
+    <div class="hero-body">   -->
+    <div class="container is-max-desktop">
+      <img id="method" autoplay muted loop playsinline height="100%" src="./static/images/exp3.png" style="width:100%;height:100%;">
+    </div> 
+    <p>
+      Visual Results of <span style="font-variant: small-caps;">H2R Aligner</span>. Top: original human demonstration video. Middle: replayed robot simulation from the same action trajectories. Bottom: synthesized robot-domain video generated by <span style="font-variant: small-caps;">H2R Aligner</span>. The generated sequences transfer human motions into robot-arm appearances while preserving background context and manipulation semantics.
+    </p>
+</section>
+
+<section class="section" id="Results">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Results of <span style="font-variant: small-caps;">EgoStabilizer</span></h2>
+    <!-- <section class="hero method"> -->
+    <!-- <div class="container is-max-desktop">
+    <div class="hero-body">   -->
+    <div class="container is-max-desktop">
+      <img id="method" autoplay muted loop playsinline height="100%" src="./static/images/exp4.png" style="width:100%;height:100%;">
+    </div> 
+    <p>
+      Per-category, frame-weighted means. “&darr;” lower is better; “&uarr;” higher is better.
+      Cells show {before} &rarr; <strong>after</strong> (relative &Delta;%).
+    </p>
+    <div class="container is-max-desktop">
+      <img id="method" autoplay muted loop playsinline height="100%" src="./static/images/exp5.png" style="width:100%;height:100%;">
+    </div> 
+    <p>
+      Qualitative evaluation of <span style="font-variant: small-caps;">EgoStabilizer</span>. On a 300-frame Clean Surface video, frames at indices 0, 150, and 300 are shown before and after stabilization. Keypoints such as wall corners and table–image intersections exhibit large jitter in the original video, whereas the stabilized outputs show negligible displacement, confirming effective viewpoint stabilization.
+    </p>
+</section>
+
+
+<section class="section" id="Results">
+  <div class="container is-max-desktop content">
+    <h2 class="title">More Visual Results</h2> 
+      <section class="hero method">
+        <!-- <div class="container is-max-desktop"> -->
+        <!-- <div class="hero-body">   -->
+    
+      <h4 class="title">1. Real Robot Replays</h4>
+        <div class="container is-max-desktop">
+          <video preload="auto"poster="" id="tree" autoplay controls muted loop width="32%"> 
+            <source src="./static/videos/real/Pick up a Bag.mp4"
+            type="video/mp4">
+          </video>
+          <video preload="auto"poster="" id="tree" autoplay controls muted loop width="32%"> 
+            <source src="./static/videos/real/Clean Surface.mp4"
+            type="video/mp4">
+          </video>
+          <video preload="auto"poster="" id="tree" autoplay controls muted loop width="32%"> 
+            <source src="./static/videos/real/Stack Bowls.mp4"
+            type="video/mp4">
+          </video>
+          <br>
+          <video preload="auto"poster="" id="tree" autoplay controls muted loop width="32%"> 
+            <source src="./static/videos/real/Dry Hands.mp4"
+            type="video/mp4">
+          </video>
+          <video preload="auto"poster="" id="tree" autoplay controls muted loop width="32%"> 
+            <source src="./static/videos/real/Stack Tennis.mp4"
+            type="video/mp4">
+          </video>
+          <video preload="auto"poster="" id="tree" autoplay controls muted loop width="32%"> 
+            <source src="./static/videos/real/Stack Cups.mp4"
+            type="video/mp4">
+          </video>
+      </div> 
+        <p style="margin-bottom: 30px;"></p>
+        <h4 class="title">2. <span style="font-variant: small-caps;">H2R Aligner</span></h4>
+        <div class="container is-max-desktop">
+          <video preload="auto"poster="" id="tree" autoplay controls muted loop width="48%"> 
+            <source src="./static/videos/h2r/out_0.mp4"
+            type="video/mp4">
+          </video>
+          <video preload="auto"poster="" id="tree" autoplay controls muted loop width="48%"> 
+            <source src="./static/videos/h2r/out_1.mp4"
+            type="video/mp4">
+          </video>
+          <br>
+          <video preload="auto"poster="" id="tree" autoplay controls muted loop width="48%"> 
+            <source src="./static/videos/h2r/out_2.mp4"
+            type="video/mp4">
+          </video>
+          <video preload="auto"poster="" id="tree" autoplay controls muted loop width="48%"> 
+            <source src="./static/videos/h2r/out_3.mp4"
+            type="video/mp4">
+          </video>
+      </div> 
+      <p style="margin-bottom: 30px;"></p>
+        <h4 class="title">3. <span style="font-variant: small-caps;">EgoStabilizer</span></h4>
+        <div class="container is-max-desktop">
+          <video preload="auto"poster="" id="tree" autoplay controls muted loop width="48%"> 
+            <source src="./static/videos/stable/1_contrast.mp4"
+            type="video/mp4">
+          </video>
+          <video preload="auto"poster="" id="tree" autoplay controls muted loop width="48%"> 
+            <source src="./static/videos/stable/61_contrast.mp4"
+            type="video/mp4">
+          </video>
+      </div> 
+</section>
+
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <p> If you use our work in your research, please cite: </p>
-    <pre><code>@article{wang2023drive,
-  title={DriveDreamer: Towards Real-world-driven World Models for Autonomous Driving},
-  author={Wang, Xiaofeng and Zhu, Zheng and Huang, Guan and Chen, Xinze and Zhu, Jiagang and Lu, Jiwen},
-  journal={arXiv preprint arXiv:2309.09777},
-  year={2023}
-}</code></pre>
+    <pre><code>Coming Soon</code></pre>
   </div>
 </section>
+
+
 
 <footer class="footer">
   <div class="container">
